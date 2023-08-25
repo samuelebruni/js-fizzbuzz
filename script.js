@@ -17,8 +17,8 @@ Applica stili differenti agli elementi aggiunti al DOM nel BONUS 1, a seconda ch
 //faccio stampare i numeri da 1 a 100 sulla console
 for (let numbers = 1; numbers <= 100; numbers++){
 
-    let fizz = (numbers % 3) == 0;
-    let buzz = (numbers % 5) == 0;
+    let fizz = numbers % 3 == 0;
+    let buzz = numbers % 5 == 0;
     let numberItems = document.getElementById("numbers-items");
 
     if (fizz && buzz){
@@ -34,6 +34,7 @@ for (let numbers = 1; numbers <= 100; numbers++){
         console.log(numbers);
         numberItems.innerHTML += `<li id=${numbers}>${numbers}</li>`;
     }
-    
+
+    document.getElementById(numbers).classList.add("text-danger", "p-3", "bg-danger", "list-unstyled", "text-white", "display-3");
 
 }
