@@ -22,19 +22,19 @@ for (let numbers = 1; numbers <= 100; numbers++){
     let numberItems = document.getElementById("numbers-items");
 
     if (fizz && buzz){
-        console.log("fizzbuzz");
-        numberItems.innerHTML += `<li id=${numbers}>fizzbuzz</li>`;
+        console.log("FizzBuzz");
+        numberItems.innerHTML += `<li id=${numbers}>FizzBuzz</li>`;
     } else if (buzz){
-        console.log("buzz");
-        numberItems.innerHTML += `<li id=${numbers}>buzz</li>`;
+        console.log("Buzz");
+        numberItems.innerHTML += `<li id=${numbers}>Buzz</li>`;
     } else if (fizz){
-        console.log("fizz");
-        numberItems.innerHTML += `<li id=${numbers}>fizz</li>`;
+        console.log("Fizz");
+        numberItems.innerHTML += `<li id=${numbers}>Fizz</li>`;
     } else {
         console.log(numbers);
         numberItems.innerHTML += `<li id=${numbers}>${numbers}</li>`;
     }
 
-    document.getElementById(numbers).classList.add("text-danger", "p-3", "bg-danger", "list-unstyled", "text-white", "display-3");
+    document.getElementById(numbers).classList.add("text-danger", "p-3", "bg-danger", "list-unstyled", "text-black", "display-3", "w-25","text-center","border","border-dark");
 
 }
