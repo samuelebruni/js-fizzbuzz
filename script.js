@@ -15,6 +15,25 @@ BONUS 2:
 Applica stili differenti agli elementi aggiunti al DOM nel BONUS 1, a seconda che il valore inserito sia un numero, un fizz, un buzz o un fizzbuzz. Se sei a corto di idee per lo stile, potresti prendere spunto dallo screenshot fornito in consegna. */
 
 //faccio stampare i numeri da 1 a 100 sulla console
-for (let numbers = 0; numbers <= 100; numbers++){
-    console.log(numbers);
+for (let numbers = 1; numbers <= 100; numbers++){
+
+    let fizz = (numbers % 3) == 0;
+    let buzz = (numbers % 5) == 0;
+    let numberItems = document.getElementById("numbers-items");
+
+    if (fizz && buzz){
+        console.log("fizzbuzz");
+        numberItems.innerHTML += `<li id=${numbers}>fizzbuzz</li>`;
+    } else if (buzz){
+        console.log("buzz");
+        numberItems.innerHTML += `<li id=${numbers}>buzz</li>`;
+    } else if (fizz){
+        console.log("fizz");
+        numberItems.innerHTML += `<li id=${numbers}>fizz</li>`;
+    } else {
+        console.log(numbers);
+        numberItems.innerHTML += `<li id=${numbers}>${numbers}</li>`;
+    }
+    
+
 }
