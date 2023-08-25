@@ -24,17 +24,24 @@ for (let numbers = 1; numbers <= 100; numbers++){
     if (fizz && buzz){
         console.log("FizzBuzz");
         numberItems.innerHTML += `<li id=${numbers}>FizzBuzz</li>`;
+        document.getElementById(numbers).classList.add("text-danger", "p-3", "bg-success", "list-unstyled", "text-black", "display-3", "w-25","text-center","border","border-dark");
+
     } else if (buzz){
         console.log("Buzz");
         numberItems.innerHTML += `<li id=${numbers}>Buzz</li>`;
+        document.getElementById(numbers).classList.add("text-danger", "p-3", "bg-warning", "list-unstyled", "text-black", "display-3", "w-25","text-center","border","border-dark");
+
     } else if (fizz){
         console.log("Fizz");
         numberItems.innerHTML += `<li id=${numbers}>Fizz</li>`;
+        document.getElementById(numbers).classList.add("text-danger", "p-3", "bg-info", "list-unstyled", "text-black", "display-3", "w-25","text-center","border","border-dark");
+
     } else {
         console.log(numbers);
         numberItems.innerHTML += `<li id=${numbers}>${numbers}</li>`;
+        document.getElementById(numbers).classList.add("text-danger", "p-3", "bg-danger", "list-unstyled", "text-black", "display-3", "w-25","text-center","border","border-dark");
+
     }
 
-    document.getElementById(numbers).classList.add("text-danger", "p-3", "bg-danger", "list-unstyled", "text-black", "display-3", "w-25","text-center","border","border-dark");
 
 }
